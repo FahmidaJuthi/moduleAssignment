@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>    
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Raleway, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background:url(bg.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            color:#fff;
+            font-size:18px;
+        }
+
+        .form-container {
+            background-color: rgba(255,255,255,.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 750px;
+        }
+        .form-container h3{
+            padding:10px 20px 60px;
+            font-size: 30px;
+            text-align:center;
+            text-decoration: underline;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            width: 48%;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"], 
+        input[type="tel"] {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #0d9ea3;
+            border-radius: 5px;
+            float:right;
+        }
+
+        .gender-group {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .gender-group label {
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .gender-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .submit-button {
+            display: block;
+            width: 100px;
+            float:left;
+            padding: 10px;
+            background: linear-gradient(90deg, #107e91, #7beffe);
+            border: none;
+            color: white;
+            font-size: 16px;
+            margin-right:20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h3>Registration</h3>
+    <form>
+        <!-- Full Name and Username -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" name="full-name">
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text"  name="username">
+            </div>
+        </div>
+
+        <!-- Email and Phone Number -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="phone-number">Phone Number</label>
+                <input type="tel"  name="phone-number">
+            </div>
+        </div>
+
+        <!-- Password and Confirm Password -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password"  name="password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password"  name="confirm-password">
+            </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="gender-group">
+            <label>Gender</label>
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="cancel" class="submit-button">Cancel</button>
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
